@@ -1,0 +1,11 @@
+<Files ~ ".json$">
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+    Order allow,deny
+    Deny from all
+</Files>
+ErrorDocument 403 /altair/403.php
+ErrorDocument 404 /altair/404.php
+ServerSignature Off
