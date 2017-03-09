@@ -55,7 +55,7 @@
             <div style="padding-top: 168px; padding-bottom: 168px;">
                 <h1 class="mdl-color-text--white" style="text-align: center; text-shadow: 0 2px 2px #888">Altair</h1>
                 <h4 class="mdl-color-text--white" style="text-align: center; text-shadow: 0 2px 2px #888">Anonymous Writing</h4>
-                <div style="background: url(assets/ic_keyboard_arrow_down_white.png) center / cover; margin: 0 auto; margin-top: 54px; width: 54px; height: 54px;">
+                <div style="background: url('assets/ic_keyboard_arrow_down_white.png') center / cover; cursor: pointer; margin: 0 auto; margin-top: 54px; width: 54px; height: 54px;" onclick="scrollTo('#logo');">
                     <a href="#logo" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                 </div>
             </div>
@@ -85,6 +85,12 @@
         </main>
     </div>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        function scrollTo(id){
+            $('html, body, div, main').stop().animate({scrollTop: $(id).offset().top}, 1000);
+        }
+    </script>
 </body>
 
 </html>
